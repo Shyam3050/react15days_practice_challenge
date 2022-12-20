@@ -52,11 +52,14 @@ function App() {
   if (error) {
     content = <p>{error}</p>;
   }
+  function addMovieToFirebase() {
+    fetchMovies();
+  }
 
   return (
     <React.Fragment>
       <section>
-        <AddMovie />
+        <AddMovie addMovieSubmit={addMovieToFirebase} />
       </section>
       <section>
         <button onClick={fetchMovies}>Fetch Movies</button>

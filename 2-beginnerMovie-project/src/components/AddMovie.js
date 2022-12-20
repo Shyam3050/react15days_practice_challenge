@@ -19,6 +19,7 @@ function AddMovie(props) {
       }
     );
     console.log(response.ok);
+    if (response.ok) props.addMovieSubmit();
   }
 
   function submitHandler(event) {
